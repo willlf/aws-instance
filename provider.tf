@@ -1,7 +1,11 @@
 terraform {
   required_providers {
     aws = {
-      region = "${var.region}"
+      source  = "hashicorp/aws"
     }
   }
+}
+
+provider "aws" {
+  region = "${var.region}"
 }
